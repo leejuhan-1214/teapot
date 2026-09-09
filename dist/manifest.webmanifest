@@ -1,0 +1,16 @@
+{
+  "id": "./",
+  "name": "teapot · 학교 에너지 모니터링",
+  "short_name": "teapot",
+  "description": "지금 확인이 필요한 교실을 살펴보세요.",
+  "lang": "ko",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f6f8",
+  "theme_color": "#102b2b",
+  "icons": [
+    { "src": "./icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

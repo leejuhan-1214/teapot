@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#102b2b">
+  <meta name="description" content="빈 교실의 냉방과 열린 문, 학교 곳곳의 에너지 낭비 의심 신호를 한눈에 확인하세요. teapot 학교 에너지 모니터링 시연.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="teapot">
+  <title>teapot · 학교 에너지 현황</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 이동</a>
+  <aside class="sidebar">
+    <a class="brand" href="#overview"><span class="brand-mark">t</span>teapot<span class="brand-dot">.</span></a>
+    <div class="school"><span class="school-icon" data-icon="school"></span><div><strong>우리학교</strong><small>에너지 모니터링</small></div><span class="demo-tag">DEMO</span></div>
+    <p class="nav-label">WORKSPACE</p>
+    <nav aria-label="주 메뉴" id="desktop-nav"></nav>
+    <div class="sidebar-bottom"><div class="mini-plant"><span data-icon="leaf"></span></div><strong>작은 확인이 만드는 변화</strong><p>필요한 곳에만 에너지를.<br>함께 살펴보는 우리학교.</p><button class="install-trigger text-button"><span data-icon="download"></span> 홈 화면에 추가</button><div class="version">teapot prototype <span>v0.1</span></div></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><div class="breadcrumb"><span data-icon="school"></span>우리학교<span class="divider">/</span><strong id="breadcrumb">학교 현황</strong></div><div class="topbar-right"><span id="network-label" class="network">온라인</span><span class="demo-pill">시연 데이터</span><button class="icon-button install-trigger" aria-label="앱 설치 안내" data-icon="download"></button></div></header>
+    <main id="main" tabindex="-1">
+      <div class="page-heading"><div><div class="eyebrow">CAMPUS ENERGY MONITOR</div><h1 id="page-title">학교 에너지 현황</h1><p id="page-subtitle">지금 확인이 필요한 교실을 살펴보세요.</p></div><div class="snapshot"><span data-icon="clock"></span><div><strong>9월 9일 수요일 · 16:40</strong><small>가상 학교 · 시연 시점</small></div></div></div>
+      <div id="app"><section class="welcome-slice"><span class="eyebrow">먼저 확인해 주세요</span><h2>빈 교실에 에어컨이 켜져 있어요</h2><p>2학년 3반 · 비어 있음 추정 · 문 열림 18분</p><button class="primary" onclick="location.reload()">교실 현황 불러오기</button></section></div>
+      <footer>실제 학교와 연결되지 않은 시연입니다. 수치와 교실 정보는 예시이며, 낭비량은 추정치입니다.</footer>
+    </main>
+  </div>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="모바일 주 메뉴"></nav>
+  <dialog id="room-dialog" class="room-dialog" aria-labelledby="room-dialog-title"><div id="room-detail"></div></dialog>
+  <dialog id="install-dialog" class="install-dialog" aria-labelledby="install-title"><button class="icon-button modal-close" data-close="install-dialog" aria-label="닫기">×</button><span class="brand-mark">t</span><h2 id="install-title">휴대폰에서도 teapot</h2><p>같은 대시보드를 홈 화면에서 바로 열 수 있어요.</p><div class="install-instructions"><strong>iPhone · iPad</strong><p>Safari 공유 메뉴 → 홈 화면에 추가 → 웹 앱으로 열기</p><strong>Android</strong><p>Chrome 메뉴 → 앱 설치 또는 홈 화면에 추가</p></div><p class="muted">현재는 시연용 웹 앱입니다. 실제 센서 연결과 푸시 알림은 다음 단계에 추가합니다. 설치 메뉴는 브라우저에 따라 다릅니다.</p><button id="native-install" class="primary" hidden>teapot 설치</button></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

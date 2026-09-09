@@ -1,0 +1,9 @@
+{
+  "name": "teapot-school-energy",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "학교 냉방 낭비 의심 장소를 찾는 모바일 지원 PWA 시연",
+  "scripts": { "dev": "node scripts/serve.mjs", "test": "node --test tests/*.test.mjs", "check": "node scripts/validate.mjs" },
+  "engines": { "node": ">=20" }
+}
